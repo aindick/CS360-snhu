@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f7f292"
+    tools:context=".DashboardActivity">
+
+
+    <androidx.gridlayout.widget.GridLayout
+        android:id="@+id/button_grid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="false"
+        android:layout_alignParentEnd="false"
+        android:layout_marginTop="64dp"
+        app:columnCount="3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:useDefaultMargins="true">
+
+        <Button
+            android:id="@+id/buttonEditWeight"
+            android:backgroundTint="#faee46"
+            android:gravity="center"
+            android:onClick="openEdit"
+            android:text="Edit Weight"
+            android:textColor="@color/black"
+            android:textSize="12sp" />
+
+        <Button
+            android:id="@+id/buttonAddGoal"
+            android:backgroundTint="#face20"
+            android:gravity="center"
+            android:onClick="onNewGoal"
+            android:text="Add Goal"
+            android:textColor="@color/black"
+            android:textSize="12sp" />
+
+        <Button
+            android:id="@+id/buttonAddWeight"
+            android:backgroundTint="#f7a414"
+            android:gravity="center"
+            android:onClick="openWeightForm"
+            android:text="Add Weight"
+            android:textColor="@color/black"
+            android:textSize="12sp" />
+
+
+    </androidx.gridlayout.widget.GridLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="120dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_grid" />
+
+    <TableLayout
+        android:id="@+id/weight_table"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:stretchColumns="*"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="32dp">
+
+
+    </TableLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
